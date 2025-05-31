@@ -1,0 +1,53 @@
+/* src/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  height: 100%; /* Ensure html takes full height for fixed background */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  
+  /* === NEW BACKGROUND STYLES === */
+  /* Replace 'YOUR_SUPABASE_IMAGE_URL_HERE' with the actual public URL of your BackgroundImage.webp */
+  background-image: url('https://hddysiezhvwncarfxbcd.supabase.co/storage/v1/object/public/eventbanners//BackgroundImage.webp'); 
+  background-size: cover; /* Scales the image to cover the entire viewport */
+  background-position: center bottom; /* Adjust as needed - 'center bottom' often good for landscapes */
+  background-attachment: fixed; /* This is key for the content scrolling over a fixed background */
+  background-repeat: no-repeat;
+  /* === END NEW BACKGROUND STYLES === */
+
+  /* Your existing default text color - content sections will need their own backgrounds */
+  color: #4A4A4A; /* theme.colors.main-text */
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%; /* Ensure body also takes at least full viewport height */
+  margin: 0; /* Remove default body margin */
+}
+
+/* Utility for text shadow on images (if needed, e.g., in EventsBanner) */
+.shadow-text {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Optional: Custom scrollbar styling */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(141, 110, 99, 0.5); /* Your 'heading-text' color with some transparency */
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(141, 110, 99, 0.7);
+}

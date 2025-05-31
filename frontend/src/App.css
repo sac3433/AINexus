@@ -1,0 +1,9 @@
+/* src/App.css */
+
+/* It's often best practice to keep this file minimal or empty when using a utility-first
+  framework like Tailwind CSS. Global styles are handled in index.css, and component-specific
+  styles are handled by Tailwind classes directly in your JSX files.
+
+  We have removed the default Vite styles for #root, .logo, and .card to prevent them
+  from interfering with your custom component layouts.
+*/
